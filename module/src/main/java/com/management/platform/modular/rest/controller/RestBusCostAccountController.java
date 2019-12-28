@@ -18,6 +18,7 @@ public class RestBusCostAccountController extends BaseController {
 
     @RequestMapping("/list")
     public ResponseData detail() {
+        System.out.println("testgit");
         List<BusCostAccount> list = this.busCostAccountService.selectAllBusCostAccount();
         return ResponseData.success(list);
     }
