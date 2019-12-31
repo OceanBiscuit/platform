@@ -23,20 +23,20 @@ public class DefaultSessionManager implements SessionManager {
     @Override
     public void createSession(String token, LoginUser loginUser) {
         caches.put(SESSION_PREFIX + token, loginUser);
-    }
+    }//将用户信息绑定到session
 
     @Override
     public LoginUser getSession(String token) {
         return caches.get(SESSION_PREFIX + token);
-    }
+    }//获取session用户信息
 
     @Override
     public void removeSession(String token) {
         caches.remove(SESSION_PREFIX + token);
-    }
+    }//清空session
 
     @Override
     public boolean haveSession(String token) {
         return caches.containsKey(SESSION_PREFIX + token);
-    }
+    }//是否有session判断是否已经登陆
 }
