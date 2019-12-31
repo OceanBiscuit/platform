@@ -25,7 +25,7 @@ import java.util.*;
 
 /**
  * 当前登录用户信息
- *
+ *实现spring-security的用户详情接口
  * @author fengshuonan
  * @Date 2019/7/18 22:29
  */
