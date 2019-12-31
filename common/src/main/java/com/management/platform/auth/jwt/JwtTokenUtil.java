@@ -23,6 +23,11 @@ import java.util.Date;
 import java.util.Map;
 
 /**
+ * payload包含声明（要求）。声明一般是用户和其他数据的声明，三种声名方式，
+ * registerred claims:一组预定义的声明，它们不是强制的但是推荐，就是下面的那些内容
+ * public claims:可以随意定义
+ * private claims:用于在同意使用它们的各方之间共享信息，并且不是注册的或公开的声明。
+ *
  * <p>jwt token工具类</p>
  * <pre>
  *     jwt的claim里一般包含以下几种数据:
