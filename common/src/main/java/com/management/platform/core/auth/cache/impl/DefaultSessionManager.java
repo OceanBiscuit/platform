@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * 基于内存的会话管理
+ * 基于内存的会话管理 这里直接将创建，获取，移除，判断用map库来代替，也就是对内存的操作
  * <p>
  * ps:您可以自行拓展内存管理哦
  *
