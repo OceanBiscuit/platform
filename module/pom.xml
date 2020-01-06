@@ -11,7 +11,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>main</artifactId>
+    <artifactId>module</artifactId>
 
     <packaging>jar</packaging>
 
