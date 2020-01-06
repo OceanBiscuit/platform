@@ -15,7 +15,6 @@
  */
 package com.management.platform.auth.aop;
 
-import com.management.platform.auth.annotion.CheckSession;
 import com.management.platform.auth.annotion.Permission;
 import com.management.platform.auth.exception.PermissionException;
 import com.management.platform.auth.service.AuthService ;
@@ -30,6 +29,7 @@ import java.lang.reflect.Method;
 
 /**
  * 权限检查的aop
+ * 如果检查用户有权限，就继续，如果无则返回 没有权限访问资源
  *
  * @author fengshuonan
  * @date 2017-07-13 21:05
@@ -41,10 +41,10 @@ public class PermissionAop {
     @Autowired
     private AuthService authService;
 
-    //@Pointcut(value = "@annotation(com.management.platform.auth.annotion.Permission)")
-    @Pointcut("execution(* *(..))" +
-            " && ( @annotation(com.management.platform.auth.annotion.CheckSession )" +
-            " || @annotation(com.management.platform.auth.annotion.Permission ))")
+    @Pointcut(value = "@annotation(com.management.platform.auth.annotion.Permission)")
+//    @Pointcut("execution(* *(..))" +
+//            " && ( @annotation(com.management.platform.auth.annotion.CheckSession )" +
+//            " || @annotation(com.management.platform.auth.annotion.Permission ))")
     private void cutPermission() {
 
     }
