@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * 当前登录用户信息获取的接口
  *
+ * com.management.platform.core.auth中LoginContextSpringSecutiryImpl实现该接口
+ *
  * @author fengshuonan
  * @Date 2019/7/18 22:27
  */
